@@ -27,6 +27,7 @@ public class TicTacToeTest {
         assertEquals(false, ttt.same(2,5,8));
     }
 
+    @Test
     public void winningConditions() {
         TicTacToeBoard ttt = new TicTacToeBoard();
         ttt.insert(0,1);

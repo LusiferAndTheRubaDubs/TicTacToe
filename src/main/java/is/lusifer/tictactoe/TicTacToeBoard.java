@@ -15,11 +15,11 @@ public class TicTacToeBoard {
       return false;
    }
 
-	public boolean same(int a, int b, int c) { 
+	public boolean same(int a, int b, int c) {
 		int x = board[a];
 		int y = board[b];
 		int z = board[c];
-		return (x == y && y == z);
+		return x != 0 && x == y && y == z;
 	}
 
    public boolean someoneWon() {
