@@ -32,3 +32,9 @@ dependencies {
     // 'test.useTestNG()' to your build script.
     testCompile 'junit:junit:4.12'
 }
+
+jar {
+    manifest {
+        attributes 'Main-Class': mainClassName
+    }
+}
