@@ -3,6 +3,8 @@ package is.lusifer.tictactoe;
 import static org.junit.Assert.assertEquals;
 import org.junit.Test;
 
+import is.lusifer.tictactoe.Domain.Player;
+
 public class PlayerTests {
     public static void main(String args[]) {
         org.junit.runner.JUnitCore.main("Tests.PlayerTests");

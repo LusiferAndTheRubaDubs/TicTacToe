@@ -1,5 +1,8 @@
 package is.lusifer.tictactoe;
 
+import is.lusifer.tictactoe.GUI.Console;
+import is.lusifer.tictactoe.GUI.GUI;
+
 public class Main {
 
     public static void main(String[] args) {
