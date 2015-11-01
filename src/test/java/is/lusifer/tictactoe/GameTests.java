@@ -1,6 +1,12 @@
 package is.lusifer.tictactoe;
 
 import org.junit.Test;
+
+import is.lusifer.tictactoe.Domain.Player;
+import is.lusifer.tictactoe.Logic.InvalidMoveException;
+import is.lusifer.tictactoe.Logic.State;
+import is.lusifer.tictactoe.Logic.TicTacToeGame;
+
 import static org.junit.Assert.assertEquals;
 
 public class GameTests {

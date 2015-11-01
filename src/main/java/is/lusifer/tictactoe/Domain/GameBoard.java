@@ -1,4 +1,4 @@
-package is.lusifer.tictactoe;
+package is.lusifer.tictactoe.Domain;
 
 public class GameBoard {
     private char board[];

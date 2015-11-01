@@ -1,4 +1,4 @@
-package is.lusifer.tictactoe;
+package is.lusifer.tictactoe.GUI;
 
 public interface GUI {
     public void run();

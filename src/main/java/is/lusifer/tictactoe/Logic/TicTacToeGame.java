@@ -1,4 +1,7 @@
-package is.lusifer.tictactoe;
+package is.lusifer.tictactoe.Logic;
+
+import is.lusifer.tictactoe.Domain.GameBoard;
+import is.lusifer.tictactoe.Domain.Player;
 
 public class TicTacToeGame {
     private Player player1;
@@ -79,5 +82,24 @@ public class TicTacToeGame {
 
     public char[] getGameBoard() {
         return gameBoard.getBoard();
+    }
+    
+    public Player getCurrentPlayer() { //
+        return currentPlayer;
+    }
+
+    public void computerMove() {  //
+        Player ai = getCurrentPlayer();
+        boolean valid;
+        do {
+            valid = true;
+            int choice = ai.generateMove();
+            try {
+                makeMove(choice);
+            }catch (InvalidMoveException e) {
+                valid = false;
+            }
+        }while(!valid);
+
     }
 }
