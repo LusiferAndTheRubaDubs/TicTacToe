@@ -5,39 +5,61 @@ import org.junit.Test;
 
 public class TicTacToeTest {
 
-    @Test 
-    public void canYouEnterTheSameTileTwice() {
-        TicTacToeBoard ttt = new TicTacToeBoard();
-        ttt.insert(1,1);
-        assertEquals(false, ttt.insert(1,1));
-    }
+   @Test
+   public void enteringDataIntoBoard() {
+      TicTacToeBoard ttt = new TicTacToeBoard();
+      for (int i = 0; i < 9; i++) {
+         ttt.set(i,1);
+      }
 
-    @Test 
-    public void testingSame() {
-        TicTacToeBoard ttt = new TicTacToeBoard();
-        ttt.insert(0,1);
-        ttt.insert(1,1);
-        ttt.insert(2,1);
-        ttt.insert(3,2);
-        ttt.insert(4,2);
-        ttt.insert(5,2);
-        assertEquals(true, ttt.same(0,1,2));
-        assertEquals(true, ttt.same(3,4,5));
-        assertEquals(false, ttt.same(1,4,7));
-        assertEquals(false, ttt.same(2,5,8));
-    }
+      IllegalArgumentException caughtException = null;
+      try {
+         ttt.set(-1,1);
+      }
+      catch(IllegalArgumentException e){
+         caughtException = e;
+      }
+      assertEquals(caughtException.getMessage(), "Input needs to be between 0 and 8");
 
-    @Test
-    public void winningConditions() {
-        TicTacToeBoard ttt = new TicTacToeBoard();
-        ttt.insert(0,1);
-        ttt.insert(1,1);
-        ttt.insert(2,1);
-        assertEquals(true, ttt.someoneWon());
-        ttt = new TicTacToeBoard();
-        ttt.insert(0,1);
-        ttt.insert(1,2);
-        ttt.insert(2,1);
-        assertEquals(false, ttt.someoneWon());
-    }
+      caughtException = null;
+      try {
+         ttt.set(9,1);
+      }
+      catch(IllegalArgumentException e){
+         caughtException = e;
+      }
+      assertEquals(caughtException.getMessage(), "Input needs to be between 0 and 8");
+   }
+
+   @Test 
+   public void testingTileStreak() {
+      TicTacToeBoard ttt = new TicTacToeBoard();
+      ttt.set(0,1);
+      ttt.set(1,1);
+      ttt.set(2,1);
+      ttt.set(3,2);
+      ttt.set(4,2);
+      ttt.set(5,2);
+      assertEquals(true, ttt.tileStreak(0,1,2));
+      assertEquals(true, ttt.tileStreak(3,4,5));
+      assertEquals(false, ttt.tileStreak(1,4,7));
+      assertEquals(false, ttt.tileStreak(2,5,8));
+   }
+   
+   @Test
+   public void gameOverLogicTest() {
+      TicTacToeBoard ttt = new TicTacToeBoard();
+      ttt.set(6,1);
+      ttt.set(3,2);
+      assertEquals(false, ttt.someoneWon());
+      ttt.set(0,1);
+      ttt.set(4,2);
+      assertEquals(false, ttt.someoneWon());
+      ttt.set(1,1);
+      ttt.set(2,2);
+      assertEquals(false, ttt.someoneWon());
+      ttt.set(7,1);
+      ttt.set(5,2);
+      assertEquals(true, ttt.someoneWon());
+   }
 }

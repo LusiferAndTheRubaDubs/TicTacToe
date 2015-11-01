@@ -5,7 +5,7 @@ public class TicTacToe {
    private TicTacToeBoard board;
    
    public TicTacToe () {
-   	board = new TicTacToeBoard();
+      board = new TicTacToeBoard();
    }
 
    private boolean gameOver () {
@@ -14,9 +14,16 @@ public class TicTacToe {
    
    public void playTicTacToe () {
       System.out.println("Welcome to a game of Tic-Tac-Toe");
-   	while (!gameOver()) {
+      
+      while (!gameOver()) {
+         for (int i = 0; i < 9; i++) {
+            board.set(i,(i%2)+1);
+         }
+      }
 
-   	}
+      if (board.someoneWon()) {
+         System.out.println("Yay someone won!");
+      }
    }
    
    public static void main(String[] args) { 
