@@ -7,7 +7,7 @@ public class TicTacToeTest {
 
    @Test
    public void enteringDataIntoBoard() {
-      TicTacToeBoard ttt = new TicTacToeBoard();
+      GameBoard ttt = new GameBoard();
       for (int i = 0; i < 9; i++) {
          ttt.set(i,1);
       }
@@ -33,7 +33,7 @@ public class TicTacToeTest {
 
    @Test 
    public void testingTileStreak() {
-      TicTacToeBoard ttt = new TicTacToeBoard();
+      GameBoard ttt = new GameBoard();
       ttt.set(0,1);
       ttt.set(1,1);
       ttt.set(2,1);
@@ -48,7 +48,7 @@ public class TicTacToeTest {
    
    @Test
    public void gameOverLogicTest() {
-      TicTacToeBoard ttt = new TicTacToeBoard();
+      GameBoard ttt = new GameBoard();
       ttt.set(6,1);
       ttt.set(3,2);
       assertEquals(false, ttt.someoneWon());
