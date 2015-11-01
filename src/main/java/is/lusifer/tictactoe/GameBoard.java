@@ -1,6 +1,6 @@
 package is.lusifer.tictactoe;
 
-public class TicTacToeBoard {
+public class GameBoard {
    private static final int boardSize = 9;
    private int[] board = new int[boardSize];
 
