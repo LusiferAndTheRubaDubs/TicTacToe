@@ -1,4 +1,4 @@
-package is.lusifer.tictactoe;
+package is.lusifer.tictactoe.Logic;
 
 public enum State {
     RUNNING,

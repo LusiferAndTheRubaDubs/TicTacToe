@@ -3,6 +3,8 @@ package is.lusifer.tictactoe;
 import static org.junit.Assert.*;
 import org.junit.Test;
 
+import is.lusifer.tictactoe.Domain.GameBoard;
+
 public class GameBoardTests {
     public static void main(String args[]) {
         org.junit.runner.JUnitCore.main("Tests.PlayerTests");

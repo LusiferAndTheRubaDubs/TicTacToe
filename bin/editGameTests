@@ -1,0 +1,3 @@
+#!/bin/bash
+
+vim src/test/java/is/lusifer/tictactoe/GameTests.java
