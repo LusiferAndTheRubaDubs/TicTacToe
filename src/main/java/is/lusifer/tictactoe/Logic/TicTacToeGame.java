@@ -84,22 +84,23 @@ public class TicTacToeGame {
         return gameBoard.getBoard();
     }
     
-    public Player getCurrentPlayer() { //
+    public Player getCurrentPlayer() {
         return currentPlayer;
     }
 
-    public void computerMove() {  //
+    public int computerMove() {
         Player ai = getCurrentPlayer();
         boolean valid;
+        int choice;
         do {
             valid = true;
-            int choice = ai.generateMove();
+            choice = ai.generateMove();
             try {
                 makeMove(choice);
             }catch (InvalidMoveException e) {
                 valid = false;
             }
         }while(!valid);
-
+        return choice;
     }
 }

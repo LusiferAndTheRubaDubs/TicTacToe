@@ -20,8 +20,10 @@ public class Console implements GUI{
                     drawBoard(game.getGameBoard());
                     if(game.getCurrentPlayer().getIsHuman())
                         getPlayerMove(game);
-                    else
-                        game.computerMove();
+                    else {
+                        int cpuMove = game.computerMove() + 1;
+                        System.out.println("The Computer selected " + cpuMove);
+                    }
                 }
                 drawBoard(game.getGameBoard());
                 announceWinner(game.getWinner());
@@ -35,8 +37,8 @@ public class Console implements GUI{
         do {
             valid = true;
             Scanner in = new Scanner(System.in);
-            System.out.println("Choose cell. In the format 0-8");
-            int tile = in.nextInt();
+            System.out.println("Choose cell. In the format 1-9");
+            int tile = in.nextInt() - 1;
             in.nextLine();
             try {
                 game.makeMove(tile);
@@ -49,11 +51,17 @@ public class Console implements GUI{
 
     private void drawBoard(char[] board) {
         StringBuilder string = new StringBuilder();
-        for (int x = 1; x < 10; x++) {
-            string.append("[" + board[x-1] + "]");
-            if(x % 3 == 0)
-                string.append("\n");
-        }
+        string.append(" _____  _____  _____\n"
+        		+ "|1    ||2    ||3    |\n"
+        		+ "|  " + board[0] +"  ||  " + board[1] +"  ||  " + board[2] +"  |\n"
+        		+ "|_____||_____||_____|\n"
+        		+ "|4    ||5    ||6    |\n"
+        		+ "|  " + board[3] +"  ||  " + board[4] +"  ||  " + board[5] +"  |\n"
+        		+ "|_____||_____||_____|\n"
+        		+ "|7    ||8    ||9    |\n"
+                + "|  " + board[6] +"  ||  " + board[7] +"  ||  " + board[8] +"  |\n"
+                + "|_____||_____||_____|\n");
+        
         string.append("\n");
         System.out.print(string);
     }
@@ -74,7 +82,7 @@ public class Console implements GUI{
         Scanner in = new Scanner(System.in);
         System.out.println("Do you want to play another game (y for yes or any other to quit");
         String cont = in.nextLine();
-        return cont == "y";
+        return !cont.startsWith("y") && !cont.startsWith("Y");
     }
 
     private TicTacToeGame setUp() {
