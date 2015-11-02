@@ -1,6 +1,7 @@
 package is.lusifer.tictactoe.GUI;
 
 import java.util.Scanner;
+import java.util.InputMismatchException;
 
 import is.lusifer.tictactoe.Domain.AI;
 import is.lusifer.tictactoe.Domain.Player;
@@ -38,7 +39,7 @@ public class Console implements GUI{
             valid = true;
             Scanner in = new Scanner(System.in);
             System.out.println("Choose cell. In the format 1-9");
-            int tile = in.nextInt() - 1;
+            int tile = getIntFromConsole(in) - 1;
             in.nextLine();
             try {
                 game.makeMove(tile);
@@ -47,6 +48,19 @@ public class Console implements GUI{
                 System.out.println("Cell is already taken or invalid. Try again...");
             }
         }while(!valid);
+    }
+
+    //Takes in Scanner
+    private int getIntFromConsole(Scanner in) {
+        int tile;
+        try{
+            tile = in.nextInt(); 
+        }catch(InputMismatchException e){
+            System.out.println("Invalid input, type in an integer");
+            in.nextLine();
+            tile = getIntFromConsole(in);
+        }
+        return tile;
     }
 
     private void drawBoard(char[] board) {
@@ -90,7 +104,7 @@ public class Console implements GUI{
         System.out.println("Enter 1 to play against the Computer");
         System.out.println("Enter 2 to play against another player");
         TicTacToeGame game = null;
-        int type = in.nextInt();
+        int type = getIntFromConsole(in);
         in.nextLine();
         switch (type) {
             case 1:
