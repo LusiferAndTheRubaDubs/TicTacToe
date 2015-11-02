@@ -1,0 +1,3 @@
+#!/bin/bash
+
+vim src/main/java/is/lusifer/tictactoe/InvalidMoveException.java
