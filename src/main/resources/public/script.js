@@ -3,7 +3,7 @@ $(document).ready(function() {
         var tile = (this).value;
 		$.ajax({
 			type: "POST",
-			url: "http://localhost:4567/playerMove",
+			url: "https://mighty-escarpment-3897.herokuapp.com/playerMove",
 			traditional: true,
 			data: 'tile=' + tile,
 			success: function (data) {
@@ -46,7 +46,7 @@ $(document).ready(function() {
         var tile = (this).value;
 		$.ajax({
 			type: "GET",
-			url: "http://localhost:4567/playagain",
+			url: "https://mighty-escarpment-3897.herokuapp.com/playagain",
 			traditional: true,
 			success: function (data) {
 				location.reload();
@@ -61,7 +61,7 @@ $(document).ready(function() {
         var tile = (this).value;
 		$.ajax({
 			type: "GET",
-			url: "http://localhost:4567/oneplayer",
+			url: "https://mighty-escarpment-3897.herokuapp.com/oneplayer",
 			traditional: true,
 			success: function (data) {
 				location.reload();
@@ -75,7 +75,7 @@ $(document).ready(function() {
         var tile = (this).value;
 		$.ajax({
 			type: "GET",
-			url: "http://localhost:4567/twoplayer",
+			url: "https://mighty-escarpment-3897.herokuapp.com/twoplayer",
 			traditional: true,
 			success: function (data) {
 				location.reload();
