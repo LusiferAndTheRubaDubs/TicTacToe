@@ -4,6 +4,11 @@ public class Player {
     protected String name;
     protected Boolean isHuman;
     
+	public Player(String name) {
+        this.name = name;
+        this.isHuman = true;
+    }
+	
     public Player() {
         this.name = "Anonymous";
         this.isHuman = true;

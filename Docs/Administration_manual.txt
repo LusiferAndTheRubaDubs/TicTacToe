@@ -1,0 +1,15 @@
+# Administration Manual 
+
+# This is a manual for directions to install and deploy the game TicTacToe.
+
+# Directions to deply on a local machine:
+# 1. Clone the repo from Github:
+# 2. Navigate to the folder:
+# 3. Run the Spark server:
+# 4. Access it with the browser:
+# 5. Maintanence:
+
+# Direction if you are setting it up on external server:
+# 1. Create a Heroku application
+# 2. Run the script
+# 3. Create Travis CI, push to Github.
