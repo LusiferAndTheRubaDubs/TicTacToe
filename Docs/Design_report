@@ -4,8 +4,6 @@
 
 # The game TicTacToe is a web application and is coded in Java.
 
-# Lýsa hér aðeins klösunum, gott líka að sýna klasana hér.
-
 Classes and functions
 
 public class TicTacToeGame
