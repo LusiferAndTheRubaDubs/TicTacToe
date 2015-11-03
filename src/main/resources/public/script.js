@@ -2,8 +2,6 @@ $(document).ready(function() {
     alert("works");
 	$(".tile").click(function () {
         var tile = (this).value;
-		var button = (this);
-		alert(tile);
 		$.ajax({
 			type: "POST",
 			url: "http://localhost:4567/playerMove",
@@ -11,8 +9,12 @@ $(document).ready(function() {
 			data: 'tile=' + tile,
 			success: function (data) {
 				obj = JSON.parse(data);
-				alert(obj[tile]);
-				button.innerHTML = obj[tile];
+				alert(obj.state);
+				for(var i = 0; i < obj.board.length; i++) {
+					var button = document.getElementById(i+1);
+					button.innerHTML = obj.board[i];
+				}
+				
 			},
 			error: function (data) {
 				alert("error");
@@ -20,7 +22,3 @@ $(document).ready(function() {
 		});
     });
 });
-
-function makePlay(type){
-
-};
