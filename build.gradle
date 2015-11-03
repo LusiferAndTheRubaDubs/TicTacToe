@@ -43,9 +43,6 @@ jar {
     }
 }
 
-task stage { 
-    dependsOn installApp
-}
 
 run {
     standardInput = System.in
