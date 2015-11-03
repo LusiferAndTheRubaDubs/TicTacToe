@@ -56,4 +56,32 @@ $(document).ready(function() {
 			}
 		});
     });
+		$("#oneplayer").click(function () {
+        var tile = (this).value;
+		$.ajax({
+			type: "GET",
+			url: "http://localhost:4567/oneplayer",
+			traditional: true,
+			success: function (data) {
+				location.reload();
+			},
+			error: function (data) {
+				alert("error");
+			}
+		});
+    });
+		$("#twoplayer").click(function () {
+        var tile = (this).value;
+		$.ajax({
+			type: "GET",
+			url: "http://localhost:4567/twoplayer",
+			traditional: true,
+			success: function (data) {
+				location.reload();
+			},
+			error: function (data) {
+				alert("error");
+			}
+		});
+    });
 });
