@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Late term assignment
 # TicTacToe
 
