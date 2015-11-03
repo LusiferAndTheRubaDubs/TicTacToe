@@ -11,7 +11,7 @@ import com.google.gson.Gson;
 import is.lusifer.tictactoe.Logic.State;
 
 public class WebUI implements SparkApplication{
-	final TicTacToeGame game = new TicTacToeGame(new Player(), new AI());
+	TicTacToeGame game = new TicTacToeGame(new Player(), new Player());
     public static void main(String[] args) {
         staticFileLocation("/public");
         SparkApplication tttWeb = new WebUI();
@@ -39,12 +39,19 @@ public class WebUI implements SparkApplication{
 			if(game.getGameState() != State.RUNNING) {
 				return gameStateJSON();
 			}
-			game.computerMove();
-			if(game.getGameState() != State.RUNNING) {
-				return gameStateJSON();
+			if(!game.getCurrentPlayer().getIsHuman()) {
+				game.computerMove();
+				if(game.getGameState() != State.RUNNING) {
+					return gameStateJSON();
+				}
 			}
 			
 			return gameStateJSON();
+        });
+		get("/playagain", (req, res) -> {
+            game = new TicTacToeGame(new Player(), new AI());
+			res.redirect("/");
+            return res;
         });
     }
 	private String gameStateJSON() {
