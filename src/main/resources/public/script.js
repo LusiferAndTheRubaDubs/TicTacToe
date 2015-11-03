@@ -56,6 +56,7 @@ $(document).ready(function() {
 			}
 		});
     });
+
 		$("#oneplayer").click(function () {
         var tile = (this).value;
 		$.ajax({
