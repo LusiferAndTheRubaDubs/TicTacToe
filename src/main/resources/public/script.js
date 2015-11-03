@@ -1,5 +1,4 @@
 $(document).ready(function() {
-    alert("works");
 	$(".tile").click(function () {
         var tile = (this).value;
 		$.ajax({
