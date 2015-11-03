@@ -1,0 +1,25 @@
+# Developement Manual
+
+# This is a manual that gives you the instructions how to install the TicTacToe game and what you need to do it.
+
+# Build environment**
+# What you need (on a clean mashine):
+# 1. Gradle
+# 2. Git
+# 3. Spark
+# 4. Heoku
+# 5. Travis
+#
+# Other necessary dependencies**
+# You have to clone the TicTacToe repo from Github to get the code:
+# Vantar hérna slóðina á klónið.
+
+# Compile & package:
+# 1. ./bin/compile
+# 2. ./bin/package
+
+
+
+# If you want to open the application in a browser:
+# https://herokutoe.herokuapp.com
+
