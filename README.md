@@ -2,9 +2,14 @@
 # Late term assignment
 # TicTacToe
 
-# Björg Thorber Sigurðardóttir
-# Guðmundur Bjarni Kristinsson
-# Guðríður Sturludóttir
-# Heiðar Berg Hallgrímsson
-# Hólmfríður Guðlaug Einarsdóttir
-# Tómas Helgi Stefánsson
+## Hugbúnaðarfræði T-303-HUGB 2015
+
+###### Björg Thorber Sigurðardóttir
+###### Guðmundur Bjarni Kristinsson
+###### Guðríður Sturludóttir
+###### Heiðar Berg Hallgrímsson
+###### Hólmfríður Guðlaug Einarsdóttir
+###### Tómas Helgi Stefánsson
+###### Magnús Vilhelm Björnsson
+
+

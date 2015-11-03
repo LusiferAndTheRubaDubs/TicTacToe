@@ -1,0 +1,10 @@
+#gameBoard {
+	/*display:none;*/
+	margin: auto;
+    width: 60%;
+}
+
+.tile {
+	height: 100px;
+	width: 100px;
+}
