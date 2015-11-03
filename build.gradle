@@ -39,6 +39,7 @@ dependencies {
 jar {
     manifest {
         attributes 'Main-Class': mainClassName
+
     }
 }
 
