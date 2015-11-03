@@ -4,5 +4,67 @@
 
 # The game TicTacToe is a web application and is coded in Java.
 
-# Lýsa hér aðeins klösunum, gott líka að sýna klasana hér.
+Classes and functions
+
+public class TicTacToeGame
+    public TicTacToeGame()
+    public State getGameState()
+    private boolean tileStreak()
+    private boolean checkWin()
+    public void makeMove()
+    private void switchCurrentPlayer()
+    private char getMark()
+    private boolean validMove()
+    public Player getWinner()
+    public char[] getGameBoard()
+    public Player getCurrentPlayer()
+    public int computerMove()
+
+public class GameBoard
+    public GameBoard()
+    public char[] getBoard()
+    public void makeMove()
+    public char getCell()
+    public boolean isCellEmpty()
+    public boolean isBoardFull()
+
+public class Player
+    public Player()
+    public String getName()
+    public void setName()
+    public Boolean getIsHuman()
+    public void setIsHuman()
+    public void setIsHuman()
+    public int generateMove()
+
+public class WebUI implements SparkApplication
+    public static void main()
+    public void init()
+    private String gameStateJSON()
+    
+public class GameBoardTests
+    public static void main()
+    public void testBoardCreation()
+    public void testMakeMove()
+    public void testIsBoardFull()
+    public void testIsCellEmpty()
+    public void testGetCell()
+
+public class GameTests
+    public static void main()
+    public void testGameInitialization()
+    public void testValidMoveOutOfBounds()
+    public void testValidMoveCellTaken()
+    public void testSwitchCurrentPlayer()
+    public void testCheckWinnerRow()
+    public void testCheckWinnerColumn()
+    public void testCheckWinnerCross()
+    public void testGetWinner()
+
+public class PlayerTests
+    public static void main()
+    public void testCreation()
+    public void testSetType()
+    public void testChangeName()
+
 
