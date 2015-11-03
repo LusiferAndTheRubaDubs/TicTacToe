@@ -1,14 +1,13 @@
 # Administration Manual 
-
+#
 # This is a manual for directions to install and deploy the game TicTacToe.
-
-# Directions to deply on a local machine:
-# 1. Clone the repo from Github:
-# 2. Navigate to the folder:
-# 3. Run the Spark server:
-# 4. Access it with the browser:
-# 5. Maintanence:
-
+#
+# Directions to deploy on a local machine:
+# 1. Clone the repo from Github:git clone https://github.com/LusiferAndTheRubaDubs/TicTacToe.git
+# 2. Navigate to the folder:cd TicTacToe/
+# 3. Build the project sh ./bin/buildAndRun
+# 3. Access it with the browser: localhost:4567
+#
 # Direction if you are setting it up on external server:
 # 1. Create a Heroku application
 # 2. Run the script

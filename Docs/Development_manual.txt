@@ -4,22 +4,35 @@
 
 # Build environment**
 # What you need (on a clean mashine):
-# 1. Gradle
+# 1. Gradle 2.8
 # 2. Git
-# 3. Spark
-# 4. Heoku
-# 5. Travis
+# 3. Java 1.8.0_66
+# 4. Travis CI
+# 5. Spark 2.3
+# 6. Heroku
+# 
+# download Gradle : http://gradle.org/gradle-download/ and to instal Gradle follow steps on: http://codetutr.com/2013/03/23/how-to-install-gradle/
 #
-# Other necessary dependencies**
+# download git: https://git-scm.com/downloads  and creat a account on git hub : https://github.com/ to connect to.
+#
 # You have to clone the TicTacToe repo from Github to get the code:
-# Vantar hérna slóðina á klónið.
-
+# https://github.com/LusiferAndTheRubaDubs/TicTacToe.git
+#
+# Java setup execute command: sudo apt-get install openjdk-7-jdk openjdk-7-jre
+#
+# Signup for Travis account, sign in on account on: https://travis-ci.org/
+# 
+# Here you can see how to setup Spark: http://sparkjava.com/
+#
+# Signup for account on https://www.heroku.com/ log in and follow the steps toolbelt.
+#
 # Compile & package:
 # 1. ./bin/compile
 # 2. ./bin/package
-
-
-
+#
+#
+#
 # If you want to open the application in a browser:
 # https://herokutoe.herokuapp.com
-
+#
+#
