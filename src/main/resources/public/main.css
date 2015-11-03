@@ -1,3 +1,6 @@
+body {
+	background-color: blue;
+}
 #gameBoard {
 	/*display:none;*/
 	margin: 10px 0px;

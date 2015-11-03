@@ -47,10 +47,8 @@ jar {
 
     }
 }
-
-task stage { 
-    dependsOn installApp
-}
+defaultTasks = ['clean']
+task stage(dependsOn: ['clean', 'installApp'])
 
 run {
     standardInput = System.in
