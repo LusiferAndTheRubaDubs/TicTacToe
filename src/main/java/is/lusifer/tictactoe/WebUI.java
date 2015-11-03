@@ -14,6 +14,9 @@ public class WebUI implements SparkApplication{
 	TicTacToeGame game = new TicTacToeGame(new Player("Crosses"), new Player("Noughts"));
 	boolean lastOne = false;
     public static void main(String[] args) {
+		if (args.length != 0 && args[0].equals("-c")) {
+    		Main.main(args);
+    	} else {
         staticFileLocation("/public");
         SparkApplication tttWeb = new WebUI();
 
@@ -23,6 +26,7 @@ public class WebUI implements SparkApplication{
         }
 
         tttWeb.init();
+     }
     }
 
     @Override
