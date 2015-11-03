@@ -1,10 +1,18 @@
 #gameBoard {
-	display:none;
-	margin: auto;
-    width: 60%;
+	/*display:none;*/
+	margin: 10px 0px;
 }
 
 .tile {
 	height: 100px;
 	width: 100px;
+	margin: 2px 0px;
+}
+
+#winner {
+	display: none;
+}
+
+#again {
+	display: none;
 }
