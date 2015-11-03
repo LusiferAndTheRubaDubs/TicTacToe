@@ -32,3 +32,22 @@ of the working directory or on external server.
 5. The business logic is coded using Test Driven Development.
 6. The code is loosely coupled and follows good object oriented design practices.
 7. Extra points
+
+# Setup
+1. Fork this repository
+2. Clone the repository to your machine
+
+# Build and Run
+1. Be located at the root of the project and enter the command:
+
+	$ sh ./bin/buildAndRun
+
+# Development
+The project was programmed in Java using:
+
+1. Java 1.8.0_66
+2. Gradle 2.8
+3. Sparks 2.3
+4. Travis CI 
+5. Heroku
+6. Selinium
