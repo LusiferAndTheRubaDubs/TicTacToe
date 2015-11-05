@@ -1,0 +1,3 @@
+#!/bin/bash
+Gradle installApp
+build/install/TicTacToe/bin/TicTacToe -c
